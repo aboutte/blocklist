@@ -1,1 +1,11 @@
-0.0.0.0 foobar.com
+## Tracking/ads/unwanted content
+# Google ADS
+0.0.0.0	partner.googleadservices.com
+
+# DoubleClick
+0.0.0.0	ad.doubleclick.net
+0.0.0.0	static.doubleclick.net
+0.0.0.0	partnerad.l.doubleclick.net
+0.0.0.0	pubads.g.doubleclick.net
+0.0.0.0	stats.g.doubleclick.net
+0.0.0.0 cm.g.doubleclick.net
