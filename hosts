@@ -3,6 +3,8 @@
 0.0.0.0	partner.googleadservices.com
 0.0.0.0 adclick.g.doubleclick.net
 0.0.0.0 pagead2.googlesyndication.com
+0.0.0.0 www.googleadservices.com
+0.0.0.0 googleadservices.com
 
 # DoubleClick
 0.0.0.0	ad.doubleclick.net
