@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Run Queries</title>
+      <script type="text/javascript">
+         var darktheme = p4vjs.useDarkTheme();
+         if (darktheme) {
+            document.write('<link rel="stylesheet" type="text/css" href="../../darkstyle.css" />');
+         }
+         else {
+            document.write('<link rel="stylesheet" type="text/css" href="../../style.css" />');
+         }
+      </script>
+      <script type="text/javascript" src="runqueries.js"></script>
+   </head>
+   <!-- call getMatrix function On body onload event to get result -->
+   <body onload="runOnload()">
+      <header>
+         <h4>
+            Run Query Demo
+         </h4>
+      </header>
+      <section class="body">
+         <label for="pick">Pick a Query: </label>
+         <select onchange="setQuery(this.value)" id="pick">
+            <option>jobs -l -m10</option>
+            <option>changes -s submitted -l -m 100 -u $curr_user</option>
+            <option>changes -s pending -l -m 100 -u $curr_user -c $curr_workspace</option>
+            <option>clients -m 100</option>
+            <option>streams -m 100</option>
+            <option>labels -m 100</option>
+            <option>users</option>
+            <option>groups</option>
+            <option>counters</option>
+            <option>protects</option>
+         </select>
+         <p>
+            <label for="querytext">Query to run: </label>
+            <input type="text" id="querytext" name="querytext" size=80 value="jobs -l -m10">
+            <button onclick="executeQuery()">Execute</button>
+         <!-- Div element to display result -->
+         <div id="queryResultContainer">
+            <p>No Items retrieved</p>
+         </div>
+      </section>
+   </body>
+</html>
